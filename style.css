@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    outline: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    background-color: #1f1d1c;
+    overflow-x: hidden;
+    transition: background-color 1s ease-in-out;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* background Image */
+
+#bg{
+    background-image: url('Body_image.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 35%;
+    filter: blur(2px);
+    position: absolute;
+    z-index: -1;
+}
+
+/* Heading & Icons container */
+
+#heading{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 18%;
+}
+
+/* Heading of Page */
+
+h1{
+    margin-right: 15%;
+    font-size: 2em;
+    cursor: none;
+    user-select: none;
+}
+
+/* Light-Mode & Dark-Mode Icons */
+
+.icons{
+    font-size: 2em;
+    cursor: pointer;
+    animation: rotate 1s ease-in-out;
+}
+
+#heading .hidden-icon{
+    display: none;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* main container */
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 25%;
+}
+
+/* Typing box */
+
+#main-container{
+    position: relative;
+}
+
+#input{
+    background-color: #1f1d1c;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px 60px 15px 15px;
+    font-size: 1em;
+    user-select: none;
+    cursor: text;
+}
+
+/* Submit button of typing box */
+
+#btn{
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #1f1d1c;
+    border: 0;
+    font-size: 2em;
+}
+
+#btn:hover{
+    color: lightblue;
+}
+
+/* list-container (ul) */
+
+#list-container{
+    list-style: none;
+}
+
+.content{
+    position: relative;
+}
+
+.context{
+    background-color: #1f1d1c;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 190px;
+    margin-top: 1px;
+    padding: 15px 70px 15px 20px;
+    font-size: 1em;
+    cursor: default;
+    outline: 0;
+}
+
+/* trash icon */
+
+.bin{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.bin:hover{
+    color: lightblue;
+}
+
+/* line-through icon */
+
+.striking{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.striking:hover{
+    color: lightblue;
+}
+
+/* line-through selected list */
+
+.unactive{
+    text-decoration: line-through;
+    text-decoration-thickness: 3px ;
+}
